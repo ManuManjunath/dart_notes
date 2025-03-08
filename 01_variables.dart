@@ -36,17 +36,40 @@ void main() {
   print(
     "${x1} is ${x1.runtimeType}, ${x2} is ${x2.runtimeType}, ${x3} is ${x3.runtimeType}",
   );
-  
+
   // vars can be reassigned
   x1 = "11";
-  
-  // final/const cannot be reassigned
+
+  // final/const cannot be reassigned - immutablw
   // x2 = "11";
   // x3 = "11";
+
+  // Final vs Const
+  // Final is a runtime conatant.
+  // Const is a compile time constant
+  final x4 = DateTime.now();
+  // Cannot run this
+  // const x5 = DateTime.now();
+  print(x4);
 
   // Operating on strings
   print("2" + "3");
   print("2" * 3);
 
+  // Nullable
+  // var can be null. However, if we want String/int/double/etc to be nullable, use the below format:
+  String? nullableString = null;
+  print(nullableString);
+  // Need not initialize to null - if its marked as nullable (?) It takes default value as null.
+  String? nullableString2;
+  print(nullableString2);
 
+  // To show the property of a nullable variable
+  print(nullableString2?.length);
+  print(nullableString2?.length ?? "EmptyString");
+  // Lets reassign and try again
+
+  nullableString2 = "x";
+  print(nullableString2?.length);
+  print(nullableString2?.length ?? "EmptyString");
 }
