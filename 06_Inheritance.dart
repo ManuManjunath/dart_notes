@@ -13,7 +13,7 @@ void main() {
 
   // If you want to use the method from parent class, use super
   car.accelerate2();
-  // Not it accelerates using the value in Vehicle rather than Car
+  // Now it accelerates using the value in Vehicle rather than Car
   print(car.speed);
 
   // You can also initialize a car as a Vehicle type
