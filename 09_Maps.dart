@@ -46,5 +46,10 @@ void main() {
   print(m5);
   m5.clear();
   print(m5);
+
+  // Looping
+  m1.forEach((k, v) {
+    print("key is $k, vaue is $v");
+  });
   
 }
